@@ -1,0 +1,45 @@
+{
+"notes":[
+  {
+    "id": 1,
+    "title": "Complete Project Report",
+    "details": "Finish writing the project report by Friday. Include findings from the latest user research, summarize key insights, and provide recommendations for next steps. Make sure to proofread and format the document according to the company's style guide.",
+    "category": "work"
+  },
+  {
+    "id": 2,
+    "title": "Buy Groceries",
+    "details": "Remember to buy milk, eggs, bread, fruits, vegetables, chicken, pasta, cheese, and snacks. Check for any ongoing discounts or special offers at the grocery store. Don't forget to bring reusable bags to reduce plastic waste.",
+    "category": "reminders"
+  },
+  {
+    "id": 3,
+    "title": "Call Mom",
+    "details": "Call mom to wish her a happy birthday. Plan a surprise dinner for her at her favorite restaurant and invite close family members. Remember to buy a birthday card and a gift. Consider ordering flowers to be delivered to her doorstep as an extra surprise.",
+    "category": "todos"
+  },
+  {
+    "id": 4,
+    "title": "Prepare Presentation",
+    "details": "Prepare slides for the upcoming meeting on the new marketing campaign. Include key metrics, target audience analysis, competitor analysis, and proposed strategies. Practice the presentation multiple times to ensure smooth delivery and anticipate possible questions from the audience.",
+    "category": "money"
+  },
+  {
+    "id": 5,
+    "title": "Plan Weekend Getaway",
+    "details": "Research potential destinations for a weekend getaway. Consider factors such as distance, activities available, accommodation options, and budget. Consult with travel companions to finalize the destination and make necessary reservations. Create an itinerary outlining planned activities and meals.",
+    "category": "todos"
+  },
+  {
+    "id": 6,
+    "title": "Review Quarterly Financial Reports",
+    "details": "Review the company's quarterly financial reports in detail. Analyze revenue, expenses, profit margins, and cash flow. Identify any trends or anomalies that require further investigation. Prepare a summary of key findings and recommendations for the executive team.",
+    "category": "money"
+  },
+  {
+    "id": 7,
+    "title": "Attend Networking Event",
+    "details": "Attend the industry networking event scheduled for next week. Prepare a brief introduction highlighting your professional background and current projects. Bring business cards and be prepared to engage in conversations with fellow professionals. Follow up with interesting contacts after the event.",
+    "category": "reminders"
+  }]
+}

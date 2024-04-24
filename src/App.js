@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Notes from './pages/Notes'
 import Create from './pages/Create'
+import Layout from "./components/Layout";
 import {createTheme, ThemeProvider} from "@mui/material";
-import {purple, blue, pink, amber} from "@mui/material/colors";
+import {purple, pink, lightBlue} from "@mui/material/colors";
 
 const theme = createTheme({
   palette: {
-    primary: amber,
-    secondary: purple
+    primary: pink
   },
   typography: {
     fontFamily: "Quicksand",
@@ -22,14 +22,16 @@ function App() {
   return (
       <ThemeProvider theme={theme}>
         <Router>
-          <Switch>
-            <Route exact path="/">
-              <Notes />
-            </Route>
-            <Route path="/create">
-              <Create />
-            </Route>
-          </Switch>
+          <Layout>
+            <Switch>
+              <Route exact path="/">
+                <Notes />
+              </Route>
+              <Route path="/create">
+                <Create />
+              </Route>
+            </Switch>
+          </Layout>
         </Router>
       </ThemeProvider>
   );

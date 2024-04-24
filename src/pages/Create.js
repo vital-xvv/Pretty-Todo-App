@@ -11,6 +11,7 @@ import {
     FormControlLabel, FormControl, FormLabel
 } from "@mui/material";
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import {useHistory} from "react-router-dom";
 
 const styles = {
     field: {
@@ -25,6 +26,7 @@ export default function Create() {
     const [noteTitleError, setNoteTitleError] = useState(false);
     const [noteDetailsError, setNoteDetailsError] = useState(false);
     const [category, setCategory] = useState("todos");
+    const history = useHistory();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -36,7 +38,17 @@ export default function Create() {
         if(noteDetails === '')
             setNoteDetailsError(true);
         if(noteTitle && noteDetails) {
-            console.log(noteTitle, noteDetails);
+            fetch("http://localhost:8000/notes", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body : JSON.stringify({
+                    title: noteTitle,
+                    details: noteDetails,
+                    category: category
+                })
+            }).then(() => history.push("/"))
         }
     }
   return (
