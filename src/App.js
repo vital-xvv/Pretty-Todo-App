@@ -3,12 +3,14 @@ import Notes from './pages/Notes'
 import Create from './pages/Create'
 import Layout from "./components/Layout";
 import {createTheme, ThemeProvider} from "@mui/material";
-import {pink} from "@mui/material/colors";
+import {lightGreen, pink} from "@mui/material/colors";
 import Edit from "./pages/Edit";
+import Counter from "./pages/Counter";
 
 const theme = createTheme({
   palette: {
-    primary: pink
+    primary: pink,
+    secondary: lightGreen
   },
   typography: {
     fontFamily: "Quicksand",
@@ -33,6 +35,9 @@ function App() {
               </Route>
               <Route path="/edit">
                 <Edit />
+              </Route>
+              <Route path="/counter">
+                <Counter />
               </Route>
             </Switch>
           </Layout>

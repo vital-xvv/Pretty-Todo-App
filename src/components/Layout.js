@@ -3,7 +3,7 @@ import Typography from "@mui/material/Typography";
 import Drawer from "@mui/material/Drawer";
 import {makeStyles} from "@mui/styles";
 import {ListItem, ListItemText, List, ListItemIcon, Box, Avatar} from "@mui/material";
-import {AddCircleOutlined, SubjectOutlined} from "@mui/icons-material";
+import {AddCircleOutlined, SubjectOutlined, HourglassBottomTwoTone} from "@mui/icons-material";
 import {useHistory, useLocation} from "react-router-dom"
 import AppBar from "@mui/material/AppBar";
 import ToolBar from "@mui/material/Toolbar";
@@ -65,6 +65,11 @@ const Layout = ({children}) => {
             text: "Create a note",
             icon: <AddCircleOutlined color="primary"/>,
             path: "/create"
+        },
+        {
+            text: "Peek IT Club",
+            icon: <HourglassBottomTwoTone color="primary"/>,
+            path: "/counter"
         }
     ]
 
@@ -81,7 +86,7 @@ const Layout = ({children}) => {
                         sx={{flexGrow: 1}}
                         variant="h6"
                     >
-                        Today is the {format(new Date(), 'do MMMM Y')}
+                        Today is the {format(new Date(), 'do MMMM y')}
                     </Typography>
 
                     <Typography
@@ -122,7 +127,7 @@ const Layout = ({children}) => {
                                 button
                                 key={item.text}
                                 onClick={() => handleClick(item.path)}
-                                className={location.pathname === item.path ? styles.active: null}>
+                                sx={location.pathname === item.path ? styles.active: null}>
                                 <ListItemIcon>{item.icon}</ListItemIcon>
                                 <ListItemText primary={item.text}/>
                             </ListItem>
