@@ -2,10 +2,11 @@ import React from 'react';
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
-import {Avatar, IconButton, Typography} from "@mui/material";
+import {Avatar, CardActions, IconButton, Typography} from "@mui/material";
 import {DeleteOutlined} from "@mui/icons-material";
+import EditIcon from '@mui/icons-material/Edit';
 import {makeStyles} from "@mui/styles";
-import {amber, deepOrange, green, pink, yellow} from "@mui/material/colors";
+import {deepOrange, green, pink, yellow} from "@mui/material/colors";
 
 const useStyles = makeStyles({
     avatar: {
@@ -26,7 +27,7 @@ const useStyles = makeStyles({
     }
 })
 
-const NoteCard = ({note, handleDelete}) => {
+const NoteCard = ({note, handleDelete, handleEdit}) => {
     const styles = useStyles(note);
     return (
         <div>
@@ -34,9 +35,14 @@ const NoteCard = ({note, handleDelete}) => {
                 <CardHeader
                     avatar={<Avatar className={styles.avatar}>{note.category[0].toUpperCase()}</Avatar>}
                 action={
-                    <IconButton onClick={() => handleDelete(note.id)}>
-                        <DeleteOutlined/>
-                    </IconButton>
+                    <CardActions>
+                        <IconButton size="small" onClick={() => handleDelete(note.id)}>
+                            <DeleteOutlined/>
+                        </IconButton>
+                        <IconButton size="small" onClick={() => handleEdit(note.id)}>
+                            <EditIcon/>
+                        </IconButton>
+                    </CardActions>
                 }
                 title={note.title}
                 subheader={note.category}
