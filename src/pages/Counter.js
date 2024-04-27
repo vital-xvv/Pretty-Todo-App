@@ -24,8 +24,11 @@ const styles = {
 const defineUpcomingDate = () => {
     const date = new Date();
     const curr_day = date.getDay();
-    if(curr_day < 6) {
-        date.setDate(date.getDate() + (6-curr_day));
+
+    date.setDate(date.getDate() + (6-curr_day%6));
+
+    if(curr_day === 6 && date.getHours() >= 12){
+        date.setDate(date.getDate() + 6);
     }
 
     date.setHours(12, 0,0);
