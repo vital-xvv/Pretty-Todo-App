@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Container from "@mui/material/Container";
-import {Box, Stack, Typography} from "@mui/material";
+import {Stack, Typography} from "@mui/material";
 
 const MS_SECOND = 1000;
 const MS_MINUTE = MS_SECOND * 60;
