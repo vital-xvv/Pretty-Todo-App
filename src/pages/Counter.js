@@ -25,7 +25,7 @@ const defineUpcomingDate = () => {
     const date = new Date();
     const curr_day = date.getDay();
 
-    date.setDate(date.getDate() + (6-curr_day%6));
+    date.setDate(date.getDate() + (6-curr_day));
 
     if(curr_day === 6 && date.getHours() >= 12){
         date.setDate(date.getDate() + 6);
@@ -60,7 +60,7 @@ const Counter = () => {
         const id2 = setInterval(() => {
             const date = defineUpcomingDate();
             setUpcomingDate(date);
-        }, 360000)
+        }, 1000)
         return () => {clearInterval(id); clearInterval(id2);}
     }, [])
 
